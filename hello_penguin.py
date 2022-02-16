@@ -36,7 +36,6 @@ HEAD = 0 # syntactic sugar: index of the worm's head
 
 main_list = []
 
-
 def main():
 
     global FPSCLOCK, DISPLAYSURF, BASICFONT
@@ -121,15 +120,15 @@ def runGame():
 
         # check if the worm has hit itself or the edge
 
-        if wormCoords[HEAD]['x'] == -1 or wormCoords[HEAD]['x'] == CELLWIDTH or wormCoords[HEAD]['y'] == -1 or wormCoords[HEAD]['y'] == CELLHEIGHT:
+        # if wormCoords[HEAD]['x'] == -1 or wormCoords[HEAD]['x'] == CELLWIDTH or wormCoords[HEAD]['y'] == -1 or wormCoords[HEAD]['y'] == CELLHEIGHT:
 
-            direction = None # game over
+        #     direction = None # game over
 
-        for wormBody in wormCoords[1:]:
+        # for wormBody in wormCoords[1:]:
 
-            if wormBody['x'] == wormCoords[HEAD]['x'] and wormBody['y'] == wormCoords[HEAD]['y']:
+        #     if wormBody['x'] == wormCoords[HEAD]['x'] and wormBody['y'] == wormCoords[HEAD]['y']:
 
-                direction = None # game over
+        #         direction = None # game over
 
 
         # check if worm has eaten an apply
@@ -139,14 +138,17 @@ def runGame():
             # don't remove worm's tail segment
 
             apple1 = getRandomLocation() # set a new apple somewhere
-
+            main_list.append('Roja')
+            
         if wormCoords[HEAD]['x'] == apple2['x'] and wormCoords[HEAD]['y'] == apple2['y']:
 
             apple2 = getRandomLocation() # set a new apple somewhere
+            main_list.append('Azul')
             
         if wormCoords[HEAD]['x'] == apple3['x'] and wormCoords[HEAD]['y'] == apple3['y']:
         
             apple3 = getRandomLocation() # set a new apple somewhere
+            main_list.append('Verde')
 
 
         DISPLAYSURF.fill(CELESTE)
@@ -161,7 +163,7 @@ def runGame():
 
         drawApple(apple3, GREEN)
 
-        drawList(len(wormCoords)-1)
+        drawList(main_list)
 
         pygame.display.update()
 
@@ -170,11 +172,11 @@ def runGame():
 
 def drawPressKeyMsg():
 
-    pressKeySurf = BASICFONT.render('Press a key to play.', True, DARKGRAY)
+    pressKeySurf = BASICFONT.render('Presiona una tecla para comenzar', True, WHITE)
 
     pressKeyRect = pressKeySurf.get_rect()
 
-    pressKeyRect.topleft = (WINDOWWIDTH - 200, WINDOWHEIGHT - 30)
+    pressKeyRect.topleft = (WINDOWWIDTH - 600, WINDOWHEIGHT - 30)
 
     DISPLAYSURF.blit(pressKeySurf, pressKeyRect)
 
@@ -268,9 +270,9 @@ def getRandomLocation():
 
 
 
-def drawList(score):
+def drawList(lista):
 
-    scoreSurf = BASICFONT.render('Comandos: %s' % (score), True, BLACK)
+    scoreSurf = BASICFONT.render('Mochila: %s' % (lista), True, BLACK)
 
     scoreRect = scoreSurf.get_rect()
 
