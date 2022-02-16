@@ -34,7 +34,7 @@ RIGHT = 'right'
 
 HEAD = 0 # syntactic sugar: index of the worm's head
 
-
+main_list = []
 
 
 def main():
@@ -161,7 +161,7 @@ def runGame():
 
         drawApple(apple3, GREEN)
 
-        drawScore(len(wormCoords) - 3)
+        drawList(len(wormCoords)-1)
 
         pygame.display.update()
 
@@ -268,13 +268,13 @@ def getRandomLocation():
 
 
 
-def drawScore(score):
+def drawList(score):
 
-    scoreSurf = BASICFONT.render('Score: %s' % (score), True, WHITE)
+    scoreSurf = BASICFONT.render('Comandos: %s' % (score), True, BLACK)
 
     scoreRect = scoreSurf.get_rect()
 
-    scoreRect.topleft = (WINDOWWIDTH - 120, 10)
+    scoreRect.topleft = (WINDOWWIDTH - 850, 600)
 
     DISPLAYSURF.blit(scoreSurf, scoreRect)
 
