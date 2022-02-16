@@ -69,12 +69,7 @@ def runGame():
 
     starty = random.randint(5, CELLHEIGHT - 6)
 
-    wormCoords = [{'x': startx,     'y': starty},
-
-                  {'x': startx - 1, 'y': starty},
-
-                  #{'x': startx - 2, 'y': starty}
-                  ]
+    wormCoords = [{'x': startx,     'y': starty}]
 
     direction = None
 
@@ -97,28 +92,24 @@ def runGame():
 
                 if (event.key == K_LEFT) and direction != RIGHT:
 
-                    #direction = LEFT
                     newHead = {'x': wormCoords[HEAD]['x'] - 1, 'y': wormCoords[HEAD]['y']}
                     wormCoords.insert(0, newHead)
                     wormCoords.pop()
 
                 elif (event.key == K_RIGHT) and direction != LEFT:
 
-                    #direction = RIGHT
                     newHead = {'x': wormCoords[HEAD]['x'] + 1, 'y': wormCoords[HEAD]['y']}
                     wormCoords.insert(0, newHead)
                     wormCoords.pop()
 
                 elif (event.key == K_UP) and direction != DOWN:
 
-                    #direction = UP
                     newHead = {'x': wormCoords[HEAD]['x'], 'y': wormCoords[HEAD]['y'] - 1}
                     wormCoords.insert(0, newHead)
                     wormCoords.pop()
 
                 elif (event.key == K_DOWN) and direction != UP:
 
-                    #direction = DOWN
                     newHead = {'x': wormCoords[HEAD]['x'], 'y': wormCoords[HEAD]['y'] + 1}
                     wormCoords.insert(0, newHead)
                     wormCoords.pop()
@@ -157,34 +148,6 @@ def runGame():
         
             apple3 = getRandomLocation() # set a new apple somewhere
 
-        # else:
-
-        #     del wormCoords[-1] # remove worm's tail segment
-
-
-        # move the worm by adding a segment in the direction it is moving
-
-        # if direction == UP:
-
-        #     newHead = {'x': wormCoords[HEAD]['x'], 'y': wormCoords[HEAD]['y'] - 1}
-        #     # time.sleep(3)
-
-        # elif direction == DOWN:
-
-        #     newHead = {'x': wormCoords[HEAD]['x'], 'y': wormCoords[HEAD]['y'] + 1}
-
-        # elif direction == LEFT:
-
-        #     newHead = {'x': wormCoords[HEAD]['x'] - 1, 'y': wormCoords[HEAD]['y']}
-
-        # elif direction == RIGHT:
-
-        #     newHead = {'x': wormCoords[HEAD]['x'] + 1, 'y': wormCoords[HEAD]['y']}
-
-        # elif direction == None:
-        #     newHead = newHead
-
-        # wormCoords.insert(0, newHead)
 
         DISPLAYSURF.fill(CELESTE)
 
