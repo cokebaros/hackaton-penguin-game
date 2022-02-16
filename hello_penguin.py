@@ -1,7 +1,3 @@
-# Wormy (a Nibbles clone)
-# By Al Sweigart al@inventwithpython.com
-# http://inventwithpython.com/pygame
-# Creative Commons BY-NC-SA 3.0 US
 
 import random, pygame, sys
 import tkinter
@@ -80,7 +76,7 @@ def runGame():
                   #{'x': startx - 2, 'y': starty}
                   ]
 
-    direction = RIGHT
+    direction = None
 
 
     # Start the apple in a random place.
@@ -99,21 +95,33 @@ def runGame():
 
             elif event.type == KEYDOWN:
 
-                if (event.key == K_LEFT or event.key == K_a) and direction != RIGHT:
+                if (event.key == K_LEFT) and direction != RIGHT:
 
-                    direction = LEFT
+                    #direction = LEFT
+                    newHead = {'x': wormCoords[HEAD]['x'] - 1, 'y': wormCoords[HEAD]['y']}
+                    wormCoords.insert(0, newHead)
+                    wormCoords.pop()
 
-                elif (event.key == K_RIGHT or event.key == K_d) and direction != LEFT:
+                elif (event.key == K_RIGHT) and direction != LEFT:
 
-                    direction = RIGHT
+                    #direction = RIGHT
+                    newHead = {'x': wormCoords[HEAD]['x'] + 1, 'y': wormCoords[HEAD]['y']}
+                    wormCoords.insert(0, newHead)
+                    wormCoords.pop()
 
-                elif (event.key == K_UP or event.key == K_w) and direction != DOWN:
+                elif (event.key == K_UP) and direction != DOWN:
 
-                    direction = UP
+                    #direction = UP
+                    newHead = {'x': wormCoords[HEAD]['x'], 'y': wormCoords[HEAD]['y'] - 1}
+                    wormCoords.insert(0, newHead)
+                    wormCoords.pop()
 
-                elif (event.key == K_DOWN or event.key == K_s) and direction != UP:
+                elif (event.key == K_DOWN) and direction != UP:
 
-                    direction = DOWN
+                    #direction = DOWN
+                    newHead = {'x': wormCoords[HEAD]['x'], 'y': wormCoords[HEAD]['y'] + 1}
+                    wormCoords.insert(0, newHead)
+                    wormCoords.pop()
 
                 elif event.key == K_ESCAPE:
 
@@ -149,34 +157,34 @@ def runGame():
         
             apple3 = getRandomLocation() # set a new apple somewhere
 
-        else:
+        # else:
 
-            del wormCoords[-1] # remove worm's tail segment
+        #     del wormCoords[-1] # remove worm's tail segment
 
 
         # move the worm by adding a segment in the direction it is moving
 
-        if direction == UP:
+        # if direction == UP:
 
-            newHead = {'x': wormCoords[HEAD]['x'], 'y': wormCoords[HEAD]['y'] - 1}
-            # time.sleep(3)
+        #     newHead = {'x': wormCoords[HEAD]['x'], 'y': wormCoords[HEAD]['y'] - 1}
+        #     # time.sleep(3)
 
-        elif direction == DOWN:
+        # elif direction == DOWN:
 
-            newHead = {'x': wormCoords[HEAD]['x'], 'y': wormCoords[HEAD]['y'] + 1}
+        #     newHead = {'x': wormCoords[HEAD]['x'], 'y': wormCoords[HEAD]['y'] + 1}
 
-        elif direction == LEFT:
+        # elif direction == LEFT:
 
-            newHead = {'x': wormCoords[HEAD]['x'] - 1, 'y': wormCoords[HEAD]['y']}
+        #     newHead = {'x': wormCoords[HEAD]['x'] - 1, 'y': wormCoords[HEAD]['y']}
 
-        elif direction == RIGHT:
+        # elif direction == RIGHT:
 
-            newHead = {'x': wormCoords[HEAD]['x'] + 1, 'y': wormCoords[HEAD]['y']}
+        #     newHead = {'x': wormCoords[HEAD]['x'] + 1, 'y': wormCoords[HEAD]['y']}
 
-        elif direction == None:
-            newHead = newHead
+        # elif direction == None:
+        #     newHead = newHead
 
-        wormCoords.insert(0, newHead)
+        # wormCoords.insert(0, newHead)
 
         DISPLAYSURF.fill(CELESTE)
 
@@ -238,15 +246,6 @@ def showStartScreen():
 
     titleSurf2 = titleFont.render('Hello Penguin!', True, CELESTE)
 
-    '''from PIL import Image
-    im = Image.open('penguin.jpeg')
-    im.show()'''
-    
-    '''pinguinito = tkinter.PhotoImage(file="penguin1.jpeg")
-    lbl_pinguinito = tkinter.Label(pingui, image = img)
-    lbl_pinguinito.pack()'''
-
-
     degrees1 = 0
 
     degrees2 = 0
@@ -304,45 +303,6 @@ def getRandomLocation():
 
     return {'x': random.randint(0, CELLWIDTH - 1), 'y': random.randint(0, CELLHEIGHT - 1)}
 
-
-
-# def showGameOverScreen():
-
-    # gameOverFont = pygame.font.Font('freesansbold.ttf', 150)
-
-    # gameSurf = gameOverFont.render('Game', True, WHITE)
-
-    # overSurf = gameOverFont.render('Over', True, WHITE)
-
-    # gameRect = gameSurf.get_rect()
-
-    # overRect = overSurf.get_rect()
-
-    # gameRect.midtop = (WINDOWWIDTH / 2, 10)
-
-    # overRect.midtop = (WINDOWWIDTH / 2, gameRect.height + 10 + 25)
-
-
-    # DISPLAYSURF.blit(gameSurf, gameRect)
-
-    # DISPLAYSURF.blit(overSurf, overRect)
-
-    # drawPressKeyMsg()
-
-    # pygame.display.update()
-
-    # pygame.time.wait(500)
-
-    # checkForKeyPress() # clear out any key presses in the event queue
-
-
-    # while True:
-
-    #     if checkForKeyPress():
-
-    #         pygame.event.get() # clear event queue
-
-    #         return
 
 
 def drawScore(score):
