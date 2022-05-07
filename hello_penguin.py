@@ -1,7 +1,5 @@
 
 import random, pygame, sys
-import tkinter
-import time
 
 from pygame.locals import *
 
