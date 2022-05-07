@@ -10,12 +10,13 @@ Este tipo de pensamiento lo podemos aplicar a la vida diaria y nos ayuda a desar
 La idea final que tenemos es la de ayudar a los niños, jóvenes y adultos a pasar de ser solo consumidores de la informática a productores de tecnología y comenzar a pensar como un computer scientist.
 Las ventajas son:
 
-1. Estimular la creatividad.
-2. Trabajar la capacidad de razonamiento y de pensamiento crítico.
-3. Desarrollar y reforzar las habilidades numéricas y lingüísticas.
-4. Fomentar los dotes de liderazgo y el trabajo en equipo y colaborativo.
+- Estimular la creatividad.
+- Trabajar la capacidad de razonamiento y de pensamiento crítico.
+- Desarrollar y reforzar las habilidades numéricas y lingüísticas.
+- Fomentar los dotes de liderazgo y el trabajo en equipo y colaborativo.
 
-¿Por qué hacemos énfasis en el valor de nuestro proyecto?
+### ¿Por qué hacemos énfasis en el valor de nuestro proyecto?
+
 Porque en este bootcamp no solo aprendimos conocimientos básicos de programación (habilidades duras) sino que además entendimos la importancia de este tema en la vida diaria.
 
 Fueron dos semanas en que estuvimos internados con personas de todas partes, de todas ocupaciones. Una diversidad que sirvió para hacernos entender que cualquiera puede programar, y la actitud de seguir aprendiendo y que podeos lograr lo que sea que nos imaginemos.
