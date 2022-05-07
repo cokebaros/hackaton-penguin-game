@@ -24,9 +24,9 @@ Fueron dos semanas en que estuvimos internados con personas de todas partes, de 
 ## Screenshots :iphone:
 
 <p float="left">
-<img src="https://github.com/enrique-zarate/penguin-hackathon-pygame/screenshoots/1.jpeg"  width="55%" height="35%" />
-<img src="https://github.com/enrique-zarate/penguin-hackathon-pygame/screenshoots/2.jpeg"  width="55%" height="35%" />
-<img src="https://github.com/enrique-zarate/penguin-hackathon-pygame/screenshoots/3.jpeg"  width="55%" height="35%" />
+<img src="https://github.com/enrique-zarate/penguin-hackathon-pygame/screenshoots/blob/main/screenshots/1.jpeg"  width="55%" height="35%" />
+<img src="https://github.com/enrique-zarate/penguin-hackathon-pygame/screenshoots/blob/main/screenshots/2.jpeg"  width="55%" height="35%" />
+<img src="https://github.com/enrique-zarate/penguin-hackathon-pygame/screenshoots/blob/main/screenshots/3.jpeg"  width="55%" height="35%" />
 </p>
 
 ## Tecnologías usadas :sunglasses:
