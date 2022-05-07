@@ -1,8 +1,12 @@
 # penguin-hackathon-pygame
 
-Pensamiento computacional: Lo que buscamos es conocer uno de los aportes más importantes de la informática a nuestras vidas: aplicar el sistema de pensamiento lógico, sistémico, algorítmico, etc para encontrar vías a la resolución de problemas.
+### Pensamiento computacional:
+
+Lo que buscamos es conocer uno de los aportes más importantes de la informática a nuestras vidas: aplicar el sistema de pensamiento lógico, sistémico, algorítmico, etc para encontrar vías a la resolución de problemas.
+
 Su capacidad es la de simplificar los elementos de un problema para desarrollar la solución a un problema y resolverlos con ayuda de la tecnología.
 Este tipo de pensamiento lo podemos aplicar a la vida diaria y nos ayuda a desarrollar aplicaciones que nos ayudan en nuestro día a día.
+
 La idea final que tenemos es la de ayudar a los niños, jóvenes y adultos a pasar de ser solo consumidores de la informática a productores de tecnología y comenzar a pensar como un computer scientist.
 Las ventajas son:
 
